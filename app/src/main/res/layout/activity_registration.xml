@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/lightgreen"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pacifico"
+        android:paddingBottom="10dp"
+        android:text="Register User"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poiretone"
+        android:paddingStart="10dp"
+        android:paddingBottom="60dp"
+        android:text="Create An Account"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.LeARn.TextInputLayout"
+        android:id="@+id/tl_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:hint="@string/student_name"
+        android:paddingBottom="10dp"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:boxStrokeWidth="2dp"
+        app:endIconTint="@color/lightgreen"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/radio_button_1"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/radio_button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="@string/student_gender_male" />
+
+        <RadioButton
+            android:id="@+id/radio_button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="@string/student_gender_female" />
+
+        <RadioButton
+            android:id="@+id/radio_button_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="@string/student_gender_other" />
+    </RadioGroup>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.LeARn.TextInputLayout"
+        android:id="@+id/tl_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/student_email"
+        app:errorEnabled="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:boxStrokeWidth="2dp"
+        app:endIconTint="@color/lightgreen"
+        app:startIconDrawable="@drawable/ic_mail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            app:errorEnabled="true"
+            android:id="@+id/user_email"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.LeARn.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tl_password"
+        android:hint="@string/student_password"
+        app:errorEnabled="true"
+        android:paddingBottom="10dp"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:boxStrokeWidth="2dp"
+        app:endIconTint="@color/lightgreen"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            app:errorEnabled="true"
+            android:id="@+id/user_password"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Group to Join: "
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <Spinner
+
+        android:id="@+id/user_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/black"
+        android:entries="@array/group"
+        android:paddingStart="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.LeARn.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/student_mobile"
+        android:id="@+id/tl_mobile"
+        android:paddingBottom="10dp"
+        app:errorEnabled="true"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:boxStrokeWidth="2dp"
+        app:endIconTint="@color/lightgreen"
+        app:startIconDrawable="@drawable/ic_smartphone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_mobile"
+            app:errorEnabled="true"
+            android:maxLength="10"
+            android:inputType="phone"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/privacy_statement" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Register"
+        android:textColor="#fff" />
+
+</LinearLayout>

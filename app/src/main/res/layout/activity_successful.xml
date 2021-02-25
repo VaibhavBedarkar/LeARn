@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Successful">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="500sp"
+        android:src="@drawable/ic_successful"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oldenburg"
+        android:gravity="center_vertical"
+        android:text="Account Created Sucessfully!!!"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#4A148C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/clickToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="20dp"
+        android:backgroundTint="#ffc1c7"
+        android:fontFamily="@font/raleway"
+        android:shadowColor="#B71C1C"
+        android:text="Login "
+        android:textAllCaps="false"
+        android:textSize="22dp"
+        app:icon="@drawable/ic_celebration"
+        app:iconGravity="start"
+        app:iconSize="40dp"
+        app:strokeColor="#FE9F82"
+        app:strokeWidth="2dp" />
+
+
+</LinearLayout>

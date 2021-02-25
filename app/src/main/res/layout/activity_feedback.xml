@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF3E0">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#FFF3E0"
+        android:orientation="vertical"
+        android:padding="30sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20sp"
+                android:paddingTop="15sp"
+                android:src="@drawable/ic_feedback" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:paddingTop="0sp"
+                android:text="@string/feed_name"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5sp"
+            android:fontFamily="@font/raleway"
+            android:text="@string/topic_name"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.LeARn.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20sp"
+            android:fontFamily="@font/raleway"
+            android:paddingBottom="10sp"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:boxStrokeWidth="2sp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5sp"
+            android:fontFamily="@font/raleway"
+            android:text="@string/select_sub"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginVertical="5sp"
+            android:backgroundTint="@color/black"
+            android:entries="@array/subject"
+            android:fontFamily="@font/raleway"
+            android:paddingStart="20sp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:layout_marginVertical="20sp"
+            android:fontFamily="@font/raleway"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:boxStrokeWidth="2sp"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:counterOverflowTextAppearance="@style/counterOverride"
+            app:counterTextAppearance="@style/counterText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF3E0"
+                android:fontFamily="@font/raleway"
+                android:gravity="top|start"
+                android:hint="Suggestion Description"
+                android:inputType="textShortMessage"
+                android:lines="10"
+                android:maxLines="15"
+                android:minLines="5"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:boxStrokeWidth="2sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:text="@string/rate_string"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20sp"
+            android:numStars="5" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/raleway"
+            android:text="@string/btn_submit"
+            android:textColor="#fff" />
+    </LinearLayout>
+</ScrollView>
