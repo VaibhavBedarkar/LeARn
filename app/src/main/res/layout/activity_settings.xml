@@ -1,164 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgreen">
+    android:layout_gravity="center"
+    android:background="@color/lightgreen"
+    android:orientation="vertical"
+    android:padding="50dp">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:background="@color/lightgreen"
-        android:orientation="vertical"
-        android:paddingHorizontal="30dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20sp"
+            android:src="@drawable/ic_manageaccounts" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway"
             android:paddingBottom="10dp"
-            android:text="Update Profile"
+            android:text="Settings"
             android:textColor="@color/black"
             android:textSize="40dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.LeARn.TextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50sp"
-            android:hint="@string/student_name"
-            android:paddingBottom="10dp"
-            app:boxStrokeColor="@color/colorPrimaryDark"
-            app:boxStrokeWidth="2dp"
-            app:endIconTint="@color/lightgreen"
-            app:startIconDrawable="@drawable/ic_person">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checkedButton="@+id/radio_button_1"
-            android:orientation="horizontal"
-            android:paddingBottom="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gender: "
-                android:textColor="@color/black"
-                android:textSize="15dp" />
-
-            <RadioButton
-                android:id="@+id/radio_button_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="10dp"
-                android:text="@string/student_gender_male" />
-
-            <RadioButton
-                android:id="@+id/radio_button_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="10dp"
-                android:text="@string/student_gender_female" />
-
-            <RadioButton
-                android:id="@+id/radio_button_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="10dp"
-                android:text="@string/student_gender_other" />
-        </RadioGroup>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.LeARn.TextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/student_email"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            app:boxStrokeColor="@color/colorPrimaryDark"
-            app:boxStrokeWidth="2dp"
-            app:endIconTint="@color/lightgreen"
-            app:startIconDrawable="@drawable/ic_mail">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusable="false"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.LeARn.TextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/student_password"
-            android:paddingBottom="10dp"
-            app:boxStrokeColor="@color/colorPrimaryDark"
-            app:boxStrokeWidth="2dp"
-            app:endIconTint="@color/lightgreen"
-            app:passwordToggleEnabled="true"
-            app:startIconDrawable="@drawable/ic_lock">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Group to Join: "
-            android:textColor="@color/black"
-            android:textSize="15dp" />
-
-        <Spinner
-            android:id="@+id/group"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/black"
-            android:entries="@array/group"
-            android:paddingStart="20dp" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.LeARn.TextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/student_mobile"
-            android:paddingBottom="10dp"
-            app:boxStrokeColor="@color/colorPrimaryDark"
-            app:boxStrokeWidth="2dp"
-            app:endIconTint="@color/lightgreen"
-            app:startIconDrawable="@drawable/ic_smartphone">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:maxLength="10"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <Button
-            android:id="@+id/register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
-            android:text="Update Details"
-            android:textColor="#fff" />
-
     </LinearLayout>
-</ScrollView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:paddingBottom="10sp"
+        android:text="Update Password"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.LeARn.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:hint="@string/hint_password"
+        android:paddingBottom="10dp"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:passwordToggleEnabled="true"
+        app:boxStrokeWidth="2dp"
+        app:endIconTint="@color/lightgreen"
+        app:startIconDrawable="@drawable/ic_lock_24px">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ch_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Change Password"
+        android:textColor="#fff" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:paddingBottom="10sp"
+        android:text="Provide Feedback"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF6F00"
+        android:text="Feedback"
+        android:textColor="#fff" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:paddingBottom="10sp"
+        android:text="Danger Zone"
+        android:textColor="#B71C1C"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B71C1C"
+        android:text="Delete Account"
+        android:textColor="#fff" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/oldenburg"
+        android:text="@string/made_by"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

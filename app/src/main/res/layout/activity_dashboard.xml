@@ -7,46 +7,55 @@
     android:background="#FFF3E0">
 
     <LinearLayout
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20sp"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
 
 
-        <ImageButton
-            android:layout_width="60dp"
-            android:id="@+id/settings"
-            android:layout_height="match_parent"
-            android:background="#FFF3E0"
-            android:src="@drawable/ic_dehaze_24px" />
+          <ImageButton
+              android:id="@+id/settings"
+              android:layout_width="60dp"
+              android:layout_height="match_parent"
+              android:background="#FFF3E0"
+              android:src="@drawable/ic_dehaze_24px"
+              app:layout_anchor="@+id/app_logo"
+              app:layout_anchorGravity="end|center"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/app_logo"
+              app:layout_constraintHorizontal_bias="0.644"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center_horizontal"
-                android:paddingLeft="20dp"
-                android:src="@drawable/learn" />
+          <ImageView
+              android:id="@+id/app_logo"
+              android:layout_width="200dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center"
+              android:layout_marginHorizontal="50sp"
+              android:paddingLeft="20dp"
+              android:src="@drawable/learn"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              tools:ignore="MissingConstraints"
+              tools:layout_editor_absoluteY="0dp" />
 
-            <ImageButton
-                android:id="@+id/feedback"
-                android:layout_width="60sp"
-                android:layout_height="match_parent"
-                android:background="#FFF3E0"
-                android:src="@drawable/ic_feedback" />
-            <ImageButton
-                android:id="@+id/logout"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="20dp"
-                android:background="#FFF3E0"
-                android:src="@drawable/ic_logout_24px" />
-        </LinearLayout>
+          <ImageButton
+              android:id="@+id/logout"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:background="#FFF3E0"
+              android:src="@drawable/ic_logout_24px"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toEndOf="@+id/app_logo"
+              app:layout_constraintTop_toTopOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <TextView

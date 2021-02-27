@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/raleway"
+                android:id="@+id/feedback_topicname"
                 android:inputType="text"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -77,7 +78,7 @@
             android:textSize="15sp" />
 
         <Spinner
-            android:id="@+id/group"
+            android:id="@+id/feedback_subject"
             android:layout_width="match_parent"
             android:layout_height="50sp"
             android:layout_marginVertical="5sp"
@@ -106,6 +107,7 @@
                 android:fontFamily="@font/raleway"
                 android:gravity="top|start"
                 android:hint="Suggestion Description"
+                android:id="@+id/feedback_suggestion"
                 android:inputType="textShortMessage"
                 android:lines="10"
                 android:maxLines="15"
@@ -126,6 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20sp"
+            android:id="@+id/feedback_rating"
             android:numStars="5" />
 
         <Button

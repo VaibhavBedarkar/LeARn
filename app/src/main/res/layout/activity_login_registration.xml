@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_username"
+            app:errorEnabled="true"
             app:boxStrokeColor="@color/colorPrimaryDark"
             app:boxStrokeWidth="2sp"
             app:endIconTint="@color/lightgreen"
@@ -46,7 +47,7 @@
             app:boxStrokeColor="@color/colorPrimaryDark"
             app:boxStrokeWidth="2sp"
             app:endIconTint="@color/lightgreen"
-            app:errorEnabled="true"
+
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@drawable/ic_lock_24px"
             app:startIconTint="@color/black">
@@ -54,6 +55,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:errorEnabled="true"
                 android:id="@+id/login_password"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
