@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Settings extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
-    Button changePassword, feedbackForm, deleteAccount,logout;
+    Button changePassword, feedbackForm, deleteAccount, logout;
     EditText getPassword;
     String password;
 
@@ -39,7 +39,6 @@ public class Settings extends AppCompatActivity {
         progressBar = findViewById(R.id.progress_bar);
 
 
-
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -49,6 +48,7 @@ public class Settings extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(Settings.this, Feedback.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -60,15 +60,15 @@ public class Settings extends AppCompatActivity {
                 user.updatePassword(password).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(Settings.this,"Password Updated Successfully!!!",Toast.LENGTH_SHORT).show();
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Settings.this, "Password Updated Successfully!!!", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                             Intent intent = new Intent(Settings.this, Dashboard.class);
                             startActivity(intent);
                             finish();
 
-                        }else{
-                            Toast.makeText(Settings.this,"Password Updated Successfully!!!",Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Settings.this, "Password Updated Successfully!!!", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Settings.this, LoginRegistration.class);
                             startActivity(intent);
                             finish();
@@ -102,14 +102,14 @@ public class Settings extends AppCompatActivity {
                 user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             progressBar.setVisibility(View.GONE);
-                            Toast.makeText(Settings.this,"Sorry to see you go :(",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Settings.this, "Sorry to see you go :(", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Settings.this, LoginRegistration.class);
                             startActivity(intent);
                             finish();
-                        }else{
-                            Toast.makeText(Settings.this,"Unable to delete account !!",Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Settings.this, "Unable to delete account !!", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
@@ -117,11 +117,6 @@ public class Settings extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
 
 
     }

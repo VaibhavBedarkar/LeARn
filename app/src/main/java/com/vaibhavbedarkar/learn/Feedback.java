@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
     String topicName, suggestion, subject;
     Float rating;
     Button feedback_submit;
+    ProgressBar feedback_progress_bar;
 
 
     @Override
@@ -38,6 +40,8 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
         feedback_subject = findViewById(R.id.feedback_subject);
         feedback_ratingBar = findViewById(R.id.feedback_rating);
         feedback_submit = findViewById(R.id.submit);
+
+        feedback_progress_bar = findViewById(R.id.feedback_progress_bar);
 
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.subject, R.layout.support_simple_spinner_dropdown_item);
@@ -52,6 +56,7 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
         feedback_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                feedback_progress_bar.setVisibility(View.VISIBLE);
 
                 topicName = feedback_topicName.getText().toString();
                 suggestion = feedback_suggestion.getText().toString();
@@ -73,10 +78,6 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
                 Intent intent = new Intent(Feedback.this, Dashboard.class);
                 startActivity(intent);
                 finish();
-
-
-
-
 
             }
         });

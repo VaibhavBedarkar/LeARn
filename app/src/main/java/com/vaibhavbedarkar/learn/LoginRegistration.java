@@ -48,6 +48,7 @@ public class LoginRegistration extends AppCompatActivity {
         if (currentUser != null) {
             Intent intent = new Intent(LoginRegistration.this, Dashboard.class);
             startActivity(intent);
+            finish();
         }
 
         button_login.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +83,7 @@ public class LoginRegistration extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginRegistration.this, Registration.class);
                 startActivity(intent);
+                finish();
             }
         });
 

@@ -36,10 +36,6 @@
                 android:textSize="40sp" />
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50sp" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -139,5 +135,11 @@
             android:fontFamily="@font/raleway"
             android:text="@string/btn_submit"
             android:textColor="#fff" />
+        <ProgressBar
+            android:id="@+id/feedback_progress_bar"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
     </LinearLayout>
 </ScrollView>
