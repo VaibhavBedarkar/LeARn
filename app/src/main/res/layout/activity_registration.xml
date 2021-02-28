@@ -7,14 +7,12 @@
     android:background="@color/lightgreen"
     android:orientation="vertical"
     android:padding="30sp">
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/pacifico"
         android:paddingBottom="10sp"
-        android:text="Register User"
+        android:text="@string/reg_user"
         android:textColor="@color/black"
         android:textSize="40sp" />
 
@@ -23,8 +21,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poiretone"
         android:paddingStart="10sp"
-        android:paddingBottom="60sp"
-        android:text="Create An Account"
+        android:paddingEnd="10sp"
+        android:paddingBottom="10sp"
+        android:text="@string/create_acc"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -54,7 +53,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gender: "
+        android:text="@string/gender"
         android:textColor="@color/black"
         android:textSize="15sp" />
 
@@ -70,21 +69,22 @@
             android:id="@+id/user_genderMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="10sp"
+            android:paddingEnd="10sp"
+            android:paddingLeft="10sp"
             android:text="@string/student_gender_male" />
 
         <RadioButton
             android:id="@+id/user_genderFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="10sp"
+            android:paddingEnd="10sp"
             android:text="@string/student_gender_female"/>
 
         <RadioButton
             android:id="@+id/user_genderOther"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="10sp"
+            android:paddingEnd="10sp"
             android:text="@string/student_gender_other"/>
     </RadioGroup>
 
@@ -139,7 +139,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Group to Join: "
+        android:text="@string/group_join"
         android:textColor="@color/black"
         android:textSize="15sp" />
 
@@ -180,7 +180,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:text="Register"
+        android:text="@string/reg_user"
         android:textColor="#fff" />
     <ProgressBar
         android:layout_width="50sp"

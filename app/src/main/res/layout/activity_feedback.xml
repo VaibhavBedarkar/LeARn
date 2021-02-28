@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:background="#FFF3E0">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#FFF3E0"
         android:orientation="vertical"
@@ -22,9 +22,10 @@
                 android:layout_width="50sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="20sp"
+                android:layout_marginEnd="20sp"
                 android:paddingTop="15sp"
-                android:src="@drawable/ic_feedback" />
+                android:src="@drawable/ic_feedback"
+                android:contentDescription="feedback icon" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -81,7 +82,8 @@
             android:backgroundTint="@color/black"
             android:entries="@array/subject"
             android:fontFamily="@font/raleway"
-            android:paddingStart="20sp" />
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp" />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -102,7 +104,7 @@
                 android:background="#FFF3E0"
                 android:fontFamily="@font/raleway"
                 android:gravity="top|start"
-                android:hint="Suggestion Description"
+                android:hint="@string/sugg_desc"
                 android:id="@+id/feedback_suggestion"
                 android:inputType="textShortMessage"
                 android:lines="10"
