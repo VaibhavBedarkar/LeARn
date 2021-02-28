@@ -22,12 +22,14 @@
         android:fontFamily="@font/oldenburg"
         android:gravity="center_vertical"
         android:text="Account Created Sucessfully!!!"
+        android:textAlignment="center"
         android:layout_gravity="center_horizontal"
         android:textColor="#4A148C"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:ignore="RtlCompat" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/clickToLogin"

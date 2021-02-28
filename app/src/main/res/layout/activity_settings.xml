@@ -33,7 +33,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="40sp" />
+        android:layout_height="20sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
         android:fontFamily="@font/raleway"
         android:paddingBottom="10sp"
         android:text="Update Password"
-        android:textColor="@color/black"
+        android:textColor="#1A237E"
         android:textSize="20dp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -70,13 +70,13 @@
         android:id="@+id/change_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#1A237E"
         android:text="Change Password"
         android:textColor="#fff" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="40sp" />
+        android:layout_height="20sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -84,7 +84,7 @@
         android:fontFamily="@font/raleway"
         android:paddingBottom="10sp"
         android:text="Provide Feedback"
-        android:textColor="@color/black"
+        android:textColor="#E65100"
         android:textSize="20dp" />
 
 
@@ -96,9 +96,26 @@
         android:text="Feedback"
         android:textColor="#fff" />
 
-    <Space
+
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="40sp" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:paddingBottom="10sp"
+        android:text="Logout"
+        android:textColor="#1B5E20"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#004D40"
+        android:text="Logout"
+        android:textColor="#fff" />
+
 
     <TextView
         android:layout_width="match_parent"
@@ -116,10 +133,17 @@
         android:backgroundTint="#B71C1C"
         android:text="Delete Account"
         android:textColor="#fff" />
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="40sp" />
+        android:layout_height="60sp" />
 
     <TextView
         android:layout_width="wrap_content"

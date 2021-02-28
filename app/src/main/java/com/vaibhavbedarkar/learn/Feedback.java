@@ -3,6 +3,7 @@ package com.vaibhavbedarkar.learn;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,11 +13,6 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -51,8 +47,7 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
 
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-//        CollectionReference feedbackRef = db.collection("UserFeedback");
-//
+
 
         feedback_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +57,7 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
                 suggestion = feedback_suggestion.getText().toString();
                 rating = feedback_ratingBar.getRating();
 
+
                 Map feedbackData = new HashMap<>();
 
                 feedbackData.put("Topic Name", topicName);
@@ -69,8 +65,17 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
                 feedbackData.put("Topic Suggestion", suggestion);
                 feedbackData.put("Rating", rating);
 
-                DocumentReference documentReference = db.collection("FeedbackDetail").document("feedback");
-                documentReference.set(feedbackData);
+
+                db.collection("UserFeedback").add(feedbackData);
+
+                Toast.makeText(Feedback.this,"Feedback Submitted Successfully!!",Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Feedback.this, Dashboard.class);
+                startActivity(intent);
+                finish();
+
+
+
 
 
             }

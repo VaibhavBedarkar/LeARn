@@ -99,7 +99,7 @@ public class LoginRegistration extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(LoginRegistration.this, "Email reset link to registered email", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginRegistration.this, "Password reset link sent to registered email", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(LoginRegistration.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
                             }
