@@ -86,6 +86,7 @@
     <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.4@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-firestore:22.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-storage:19.2.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth:20.0.2@aar" level="project" />
@@ -143,6 +144,7 @@
     <orderEntry type="library" name="Gradle: com.google.ar.sceneform:core:1.15.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.ar.sceneform:rendering:1.15.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.ar:core:1.23.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.ar.sceneform:assets:1.15.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.ar.sceneform:sceneform-base:1.15.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.ar.sceneform:filament-android:1.15.0@aar" level="project" />
   </component>
