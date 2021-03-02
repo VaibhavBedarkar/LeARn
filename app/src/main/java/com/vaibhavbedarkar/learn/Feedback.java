@@ -1,8 +1,5 @@
 package com.vaibhavbedarkar.learn;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +11,9 @@ import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -73,7 +73,7 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
 
                 db.collection("UserFeedback").add(feedbackData);
 
-                Toast.makeText(Feedback.this,"Feedback Submitted Successfully!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Feedback.this, "Feedback Submitted Successfully!!", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(Feedback.this, Dashboard.class);
                 startActivity(intent);

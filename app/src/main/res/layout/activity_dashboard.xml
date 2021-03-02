@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#FFF3E0">
+    android:background="#FFF3E0"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -19,9 +19,10 @@
 
         <ImageButton
             android:id="@+id/settings"
-            android:layout_width="60dp"
+            android:layout_width="60sp"
             android:layout_height="match_parent"
             android:background="#FFF3E0"
+            android:contentDescription="Setting logo"
             android:src="@drawable/ic_dehaze_24px"
             app:layout_anchor="@+id/app_logo"
             app:layout_anchorGravity="end|center"
@@ -29,13 +30,12 @@
             app:layout_constraintEnd_toStartOf="@+id/app_logo"
             app:layout_constraintHorizontal_bias="0.644"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Setting logo"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/app_logo"
-            android:layout_width="200dp"
-            android:layout_height="80dp"
+            android:layout_width="200sp"
+            android:layout_height="80sp"
             android:layout_gravity="center"
             android:layout_marginHorizontal="50sp"
             android:contentDescription="LeARn logo"
@@ -43,14 +43,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="0dp" />
+            tools:layout_editor_absoluteY="0sp" />
 
         <ImageButton
             android:id="@+id/logout"
             android:layout_width="60sp"
             android:layout_height="match_parent"
-            android:contentDescription="logout logo"
             android:background="#FFF3E0"
+            android:contentDescription="logout logo"
             android:src="@drawable/ic_logout_24px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,8 +63,8 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:padding="20dp"
+        android:layout_marginTop="44sp"
+        android:padding="20sp"
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -82,13 +82,13 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_margin="10sp"
                     android:background="#FFAB91"
-                    android:elevation="8dp"
                     android:contentDescription="physics logo"
-                    android:padding="15dp"
+                    android:elevation="8sp"
+                    android:padding="15sp"
                     android:src="@drawable/ic_dashboard_physics" />
 
                 <TextView
@@ -109,12 +109,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_margin="10sp"
                     android:background="#FFCC80"
-                    android:elevation="8dp"
-                    android:padding="15dp"
+                    android:elevation="8sp"
+                    android:padding="15sp"
                     android:src="@drawable/ic_dashboard_chemistry" />
 
                 <TextView
@@ -122,10 +122,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="10sp"
                     android:text="Chemistry"
                     android:textColor="#000"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -135,12 +135,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_margin="10sp"
                     android:background="#FFE082"
-                    android:elevation="8dp"
-                    android:padding="15dp"
+                    android:elevation="8sp"
+                    android:padding="15sp"
                     android:src="@drawable/ic_dashboard_biology" />
 
                 <TextView
@@ -148,10 +148,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="10sp"
                     android:text="Biology"
                     android:textColor="#000"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -161,12 +161,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_margin="10sp"
                     android:background="#FFF59D"
-                    android:elevation="8dp"
-                    android:padding="15dp"
+                    android:elevation="8sp"
+                    android:padding="15sp"
                     android:src="@drawable/ic_dashboard_history" />
 
                 <TextView
@@ -174,10 +174,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="10sp"
                     android:text="History"
                     android:textColor="#000"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -187,12 +187,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_margin="10sp"
                     android:background="#C5E1A5"
-                    android:elevation="8dp"
-                    android:padding="15dp"
+                    android:elevation="8sp"
+                    android:padding="15sp"
                     android:src="@drawable/ic_dashboard_geography" />
 
                 <TextView
@@ -200,10 +200,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="10sp"
                     android:text="Geography"
                     android:textColor="#000"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>

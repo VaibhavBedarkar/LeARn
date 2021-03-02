@@ -7,6 +7,7 @@
     android:background="@color/lightgreen"
     android:orientation="vertical"
     android:padding="30sp">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,25 +30,25 @@
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.LeARn.TextInputLayout"
         android:id="@+id/tl_name"
+        style="@style/Widget.LeARn.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:errorEnabled="true"
         android:hint="@string/student_name"
         android:paddingBottom="10sp"
         app:boxStrokeColor="@color/colorPrimaryDark"
         app:boxStrokeWidth="2sp"
         app:endIconTint="@color/lightgreen"
+        app:errorEnabled="true"
         app:startIconDrawable="@drawable/ic_person">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:errorEnabled="true"
             android:inputType="text"
-            android:maxLines="1" />
+            android:maxLines="1"
+            app:errorEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -69,8 +70,8 @@
             android:id="@+id/user_genderMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingEnd="10sp"
             android:paddingLeft="10sp"
+            android:paddingEnd="10sp"
             android:text="@string/student_gender_male" />
 
         <RadioButton
@@ -78,62 +79,62 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingEnd="10sp"
-            android:text="@string/student_gender_female"/>
+            android:text="@string/student_gender_female" />
 
         <RadioButton
             android:id="@+id/user_genderOther"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingEnd="10sp"
-            android:text="@string/student_gender_other"/>
+            android:text="@string/student_gender_other" />
     </RadioGroup>
 
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.LeARn.TextInputLayout"
         android:id="@+id/tl_email"
+        style="@style/Widget.LeARn.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/student_email"
-        app:errorEnabled="true"
         android:paddingTop="10sp"
         android:paddingBottom="10sp"
         app:boxStrokeColor="@color/colorPrimaryDark"
         app:boxStrokeWidth="2sp"
         app:endIconTint="@color/lightgreen"
+        app:errorEnabled="true"
         app:startIconDrawable="@drawable/ic_mail">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            app:errorEnabled="true"
-            android:id="@+id/user_email"
-            android:maxLines="1" />
+            android:maxLines="1"
+            app:errorEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_password"
         style="@style/Widget.LeARn.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tl_password"
         android:hint="@string/student_password"
-        app:errorEnabled="true"
         android:paddingBottom="10sp"
         app:boxStrokeColor="@color/colorPrimaryDark"
         app:boxStrokeWidth="2sp"
         app:endIconTint="@color/lightgreen"
+        app:errorEnabled="true"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_lock">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:maxLength="20"
-            app:errorEnabled="true"
-            android:id="@+id/user_password"
-            android:maxLines="1" />
+            android:maxLines="1"
+            app:errorEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -153,26 +154,26 @@
         android:paddingStart="20sp" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_mobile"
         style="@style/Widget.LeARn.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/student_mobile"
-        android:id="@+id/tl_mobile"
         android:paddingBottom="10sp"
-        app:errorEnabled="true"
         app:boxStrokeColor="@color/colorPrimaryDark"
         app:boxStrokeWidth="2sp"
         app:endIconTint="@color/lightgreen"
+        app:errorEnabled="true"
         app:startIconDrawable="@drawable/ic_smartphone">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/user_mobile"
-            app:errorEnabled="true"
-            android:maxLength="10"
             android:inputType="phone"
-            android:maxLines="1" />
+            android:maxLength="10"
+            android:maxLines="1"
+            app:errorEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -182,12 +183,13 @@
         android:backgroundTint="@color/black"
         android:text="@string/reg_user"
         android:textColor="#fff" />
+
     <ProgressBar
+        android:id="@+id/progress_register"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:visibility="gone"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/progress_register"/>
+        android:visibility="gone" />
 
 
 </LinearLayout>

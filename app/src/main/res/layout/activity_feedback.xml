@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:background="#FFF3E0">
 
-    <LinearLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -23,9 +22,9 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="20sp"
+                android:contentDescription="@string/feedback"
                 android:paddingTop="15sp"
-                android:src="@drawable/ic_feedback"
-                android:contentDescription="feedback icon" />
+                android:src="@drawable/ic_feedback" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -57,10 +56,10 @@
             app:boxStrokeWidth="2sp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/feedback_topicname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/raleway"
-                android:id="@+id/feedback_topicname"
                 android:inputType="text"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -99,13 +98,13 @@
             app:counterTextAppearance="@style/counterText">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/feedback_suggestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFF3E0"
                 android:fontFamily="@font/raleway"
                 android:gravity="top|start"
                 android:hint="@string/sugg_desc"
-                android:id="@+id/feedback_suggestion"
                 android:inputType="textShortMessage"
                 android:lines="10"
                 android:maxLines="15"
@@ -123,10 +122,10 @@
             android:textSize="15sp" />
 
         <RatingBar
+            android:id="@+id/feedback_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20sp"
-            android:id="@+id/feedback_rating"
             android:numStars="5" />
 
         <Button
@@ -137,11 +136,12 @@
             android:fontFamily="@font/raleway"
             android:text="@string/btn_submit"
             android:textColor="#fff" />
+
         <ProgressBar
             android:id="@+id/feedback_progress_bar"
             android:layout_width="40sp"
             android:layout_height="40sp"
             android:layout_gravity="center_horizontal"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </LinearLayout>
 </ScrollView>

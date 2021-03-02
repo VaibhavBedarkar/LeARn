@@ -12,7 +12,7 @@ public class CustomARFragment extends ArFragment {
         config.setUpdateMode(Config.UpdateMode.LATEST_CAMERA_IMAGE);
         ArActivity arActivity = (ArActivity) getActivity();
         assert arActivity != null;
-        arActivity.loadDB(session,config);
+        arActivity.loadDB(session, config);
         this.getArSceneView().setupSession(session);
         return config;
     }
