@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@color/lightgreen"
-    tools:context=".MainActivity">
+    tools:context=".SplashScreen">
 
     <ImageView
         android:id="@+id/startuplogo"

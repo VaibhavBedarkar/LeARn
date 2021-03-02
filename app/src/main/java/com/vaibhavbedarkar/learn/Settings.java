@@ -69,7 +69,7 @@ public class Settings extends AppCompatActivity {
 
                         } else {
                             Toast.makeText(Settings.this, "Password Updated Successfully!!!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(Settings.this, LoginRegistration.class);
+                            Intent intent = new Intent(Settings.this, Login.class);
                             startActivity(intent);
                             finish();
 
@@ -86,7 +86,7 @@ public class Settings extends AppCompatActivity {
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
                 firebaseAuth.signOut();
-                Intent intent = new Intent(Settings.this, LoginRegistration.class);
+                Intent intent = new Intent(Settings.this, Login.class);
                 startActivity(intent);
                 finish();
 
@@ -105,7 +105,7 @@ public class Settings extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             progressBar.setVisibility(View.GONE);
                             Toast.makeText(Settings.this, "Sorry to see you go :(", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(Settings.this, LoginRegistration.class);
+                            Intent intent = new Intent(Settings.this, Login.class);
                             startActivity(intent);
                             finish();
                         } else {

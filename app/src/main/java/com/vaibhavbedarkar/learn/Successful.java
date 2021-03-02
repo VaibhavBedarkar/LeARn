@@ -19,7 +19,7 @@ public class Successful extends AppCompatActivity {
         return_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Successful.this, LoginRegistration.class);
+                Intent intent = new Intent(Successful.this, Login.class);
                 startActivity(intent);
                 finish();
             }
