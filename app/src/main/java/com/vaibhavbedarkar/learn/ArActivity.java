@@ -30,6 +30,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.StringCharacterIterator;
 import java.util.Collection;
+import java.util.HashMap;
 
 public class ArActivity extends AppCompatActivity {
     private ArFragment arFragment;
@@ -47,35 +48,19 @@ public class ArActivity extends AppCompatActivity {
         downloadbtn = findViewById(R.id.download_btn);
 
 
-        FirebaseApp.initializeApp(this);
-        FirebaseStorage storage = FirebaseStorage.getInstance();
+
 
         arFragment.getArSceneView().getScene().addOnUpdateListener(this::onUpdate);
-        StorageReference modelRef = storage.getReference().child("out.glb");
-        downloadbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    File file = File.createTempFile(model,".glb");
-                    modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                            renderModel(file);
-                        }
-                    });
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
-                    AnchorNode anchorNode = new AnchorNode(hitResult.createAnchor());
-                    anchorNode.setRenderable(renderable);
-                    arFragment.getArSceneView().getScene().addChild(anchorNode);
-                });
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Toast.makeText(ArActivity.this,model,Toast.LENGTH_SHORT).show();
 
 
-            }
-        });
+
+
 
     }
 
@@ -100,85 +85,64 @@ public class ArActivity extends AppCompatActivity {
     }
 
     private void onUpdate(FrameTime frameTime) {
+        FirebaseApp.initializeApp(this);
+        FirebaseStorage storage = FirebaseStorage.getInstance();
         Frame frame = arFragment.getArSceneView().getArFrame();
+
         Collection<AugmentedImage> images = frame.getUpdatedTrackables(AugmentedImage.class);
+
+        HashMap<String, String> imageToModel = new HashMap<>();
+        imageToModel.put("Sun.jpg", "Orbiting solar system.glb");
+        imageToModel.put("animalcell.jpg", "Animal cell.glb");
+        imageToModel.put("butterfly.png", "Monarch butterfly.glb");
+        imageToModel.put("cat.jpg", "Cat.glb");
+        imageToModel.put("humanheart.jpg", "Beating heart.glb");
+        imageToModel.put("parrot.jpg", "Parrot.glb");
+        imageToModel.put("trex.jpg", "Tyrannosaurus Rex.glb");
+
+
 
 
         for(AugmentedImage image: images){
             if(image.getTrackingMethod() == AugmentedImage.TrackingMethod.FULL_TRACKING){
-                if(image.getName().equals("Sun.jpg")){
-                    model = "Orbiting solar system.glb";
+                if(imageToModel.get(image.getName())!= null){
+                    model = imageToModel.get(image.getName());
                     stringCharacterIterator.setText(model);
                     Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
                     downloadbtn.setVisibility(View.VISIBLE);
-
-
-
-
-                }else if(image.getName().equals("animalcell.jpg")){
-                    model = "Animal cell.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
-
-                }else if(image.getName().equals("butterfly.png")){
-                    model = "Monarch butterfly.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
-
-                }else if(image.getName().equals("cat.jpg")){
-                    model = "Cat.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
-
-                }else if(image.getName().equals("duck.jpg")){
-                    model = "Orbiting solar system.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
-
-                }else if(image.getName().equals("humanheart.jpg")){
-                    model = "Beating heart.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
-
-                }else if(image.getName().equals("kangaroo.jpg")){
-                    model = "Orbiting solar system.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
-
-                }else if(image.getName().equals("octopus.jpg")){
-                    model = "Orbiting solar system.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
-
-                }else if(image.getName().equals("parrot.jpg")){
-                    model = "Parrot.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
-
-                }else if(image.getName().equals("trex.jpg")){
-                    model = "Tyrannosaurus Rex.glb";
-                    stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this,"Click to Download: "+model,Toast.LENGTH_SHORT).show();
-                    downloadbtn.setVisibility(View.VISIBLE);
-
 
                 }
+
+
+
+
+
+
+                StorageReference modelRef = storage.getReference().child(model);
+                downloadbtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            File file = File.createTempFile(model,".glb");
+                            modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                    renderModel(file);
+                                }
+                            });
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+                        arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
+                            AnchorNode anchorNode = new AnchorNode(hitResult.createAnchor());
+                            anchorNode.setRenderable(renderable);
+                            arFragment.getArSceneView().getScene().addChild(anchorNode);
+                        });
+
+
+                    }
+                });
 
 
 
