@@ -1,78 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF3E0"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/settings"
             android:layout_width="60sp"
-            android:layout_height="match_parent"
+            android:layout_height="80sp"
             android:background="#FFF3E0"
             android:contentDescription="Setting logo"
             android:src="@drawable/ic_dehaze_24px"
-            app:layout_anchor="@+id/app_logo"
-            app:layout_anchorGravity="end|center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/app_logo"
-            app:layout_constraintHorizontal_bias="0.644"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/app_logo"
-            android:layout_width="200sp"
-            android:layout_height="80sp"
+            android:layout_width="180sp"
+            android:layout_height="60sp"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="50sp"
+            android:layout_marginHorizontal="20sp"
             android:contentDescription="LeARn logo"
             android:src="@drawable/learn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="0sp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logout"
+            app:layout_constraintStart_toEndOf="@+id/settings"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/logout"
             android:layout_width="60sp"
-            android:layout_height="match_parent"
+            android:layout_height="80sp"
             android:background="#FFF3E0"
             android:contentDescription="logout logo"
             android:src="@drawable/ic_logout_24px"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/app_logo"
             app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/heading"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="22sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10sp"
+        app:cardCornerRadius="4sp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2sp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/law"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/oldenburg"
+                android:paddingTop="2sp"
+                android:text="@string/law"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/law_statement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/pacifico"
+                android:text="@string/law_statement"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/generate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10sp"
+            android:text="@string/random_law"
+
+            app:elevation="4sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="14dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/Articles"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="22sp" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44sp"
-        android:padding="20sp"
+        android:paddingHorizontal="20dp"
         android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/card">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -82,13 +141,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
-                    android:layout_margin="10sp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
                     android:background="#FFAB91"
-                    android:contentDescription="physics logo"
-                    android:elevation="8sp"
-                    android:padding="15sp"
+                    android:elevation="8dp"
+                    android:padding="15dp"
                     android:src="@drawable/ic_dashboard_physics" />
 
                 <TextView
@@ -96,10 +154,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10sp"
-                    android:text="@string/sub_phy"
+                    android:paddingBottom="10dp"
+                    android:text="Physics"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -109,12 +167,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
-                    android:layout_margin="10sp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
                     android:background="#FFCC80"
-                    android:elevation="8sp"
-                    android:padding="15sp"
+                    android:elevation="8dp"
+                    android:padding="15dp"
                     android:src="@drawable/ic_dashboard_chemistry" />
 
                 <TextView
@@ -122,10 +180,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10sp"
+                    android:paddingBottom="10dp"
                     android:text="Chemistry"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -135,12 +193,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
-                    android:layout_margin="10sp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
                     android:background="#FFE082"
-                    android:elevation="8sp"
-                    android:padding="15sp"
+                    android:elevation="8dp"
+                    android:padding="15dp"
                     android:src="@drawable/ic_dashboard_biology" />
 
                 <TextView
@@ -148,10 +206,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10sp"
+                    android:paddingBottom="10dp"
                     android:text="Biology"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -161,12 +219,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
-                    android:layout_margin="10sp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
                     android:background="#FFF59D"
-                    android:elevation="8sp"
-                    android:padding="15sp"
+                    android:elevation="8dp"
+                    android:padding="15dp"
                     android:src="@drawable/ic_dashboard_history" />
 
                 <TextView
@@ -174,10 +232,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10sp"
+                    android:paddingBottom="10dp"
                     android:text="History"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -187,12 +245,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
-                    android:layout_margin="10sp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
                     android:background="#C5E1A5"
-                    android:elevation="8sp"
-                    android:padding="15sp"
+                    android:elevation="8dp"
+                    android:padding="15dp"
                     android:src="@drawable/ic_dashboard_geography" />
 
                 <TextView
@@ -200,10 +258,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poiretone"
-                    android:paddingBottom="10sp"
+                    android:paddingBottom="10dp"
                     android:text="Geography"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
@@ -212,19 +270,18 @@
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/extended_fab"
         android:layout_width="wrap_content"
-        android:layout_height="60sp"
+        android:layout_height="60dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20sp"
+        android:layout_margin="28dp"
         android:backgroundTint="#FFAB91"
         android:shadowColor="#B71C1C"
         android:text="Scan for AR "
         android:textAllCaps="false"
         app:icon="@drawable/ic_arobj"
-        app:iconSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:iconSize="40dp"
         app:strokeColor="#FE9F82"
-        app:strokeWidth="2sp" />
+        app:strokeWidth="2dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+

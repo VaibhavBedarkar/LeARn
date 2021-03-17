@@ -1,5 +1,6 @@
 package com.vaibhavbedarkar.learn;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -30,12 +31,14 @@ import java.text.StringCharacterIterator;
 import java.util.Collection;
 import java.util.HashMap;
 
+import javax.crypto.AEADBadTagException;
+
 public class ArActivity extends AppCompatActivity {
     private ArFragment arFragment;
-    private com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton downloadbtn;
+    String devName = "";
     String model = "";
     StringCharacterIterator stringCharacterIterator = new StringCharacterIterator(model);
-
+    private com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton downloadbtn, close_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +46,19 @@ public class ArActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ar);
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.arFragment);
         downloadbtn = findViewById(R.id.download_btn);
-
+        close_btn = findViewById(R.id.close_btn);
 
         arFragment.getArSceneView().getScene().addOnUpdateListener(this::onUpdate);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        Toast.makeText(ArActivity.this, model, Toast.LENGTH_SHORT).show();
 
+
+        close_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ArActivity.this, Dashboard.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 
@@ -85,7 +91,7 @@ public class ArActivity extends AppCompatActivity {
 
         HashMap<String, String> imageToModel = new HashMap<>();
         imageToModel.put("Sun.jpg", "Orbiting solar system.glb");
-        imageToModel.put("animalcell.jpg", "Animal cell.glb");
+        imageToModel.put("animalcell.jpg", "Animal Cell Detail.glb");
         imageToModel.put("butterfly.png", "Monarch butterfly.glb");
         imageToModel.put("cat.jpg", "Cat.glb");
         imageToModel.put("humanheart.jpg", "Beating heart.glb");
@@ -98,34 +104,37 @@ public class ArActivity extends AppCompatActivity {
                 if (imageToModel.get(image.getName()) != null) {
                     model = imageToModel.get(image.getName());
                     stringCharacterIterator.setText(model);
-                    Toast.makeText(ArActivity.this, "Click to Download: " + model, Toast.LENGTH_SHORT).show();
                     downloadbtn.setVisibility(View.VISIBLE);
-
                 }
 
                 StorageReference modelRef = storage.getReference().child(model);
                 downloadbtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        downloadbtn.setVisibility(View.INVISIBLE);
                         try {
                             File file = File.createTempFile(model, ".glb");
                             modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                                     renderModel(file);
+                                    Toast.makeText(ArActivity.this, "Asset Downloaded Successfully, Tap to open ", Toast.LENGTH_SHORT).show();
                                 }
                             });
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
 
-                        arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
-                            AnchorNode anchorNode = new AnchorNode(hitResult.createAnchor());
-                            anchorNode.setRenderable(renderable);
-                            arFragment.getArSceneView().getScene().addChild(anchorNode);
-                        });
-
-
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
+                                    AnchorNode anchorNode = new AnchorNode(hitResult.createAnchor());
+                                    anchorNode.setRenderable(renderable);
+                                    arFragment.getArSceneView().getScene().addChild(anchorNode);
+                                });
+                            }
+                        }).start();
                     }
                 });
 

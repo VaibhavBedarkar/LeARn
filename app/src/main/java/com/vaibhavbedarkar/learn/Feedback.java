@@ -49,9 +49,7 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
         feedback_subject.setAdapter(adapter);
         feedback_subject.setOnItemSelectedListener(this);
 
-
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-
 
         feedback_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,14 +60,12 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
                 suggestion = feedback_suggestion.getText().toString();
                 rating = feedback_ratingBar.getRating();
 
-
                 Map feedbackData = new HashMap<>();
 
                 feedbackData.put("Topic Name", topicName);
                 feedbackData.put("Topic Subject", subject);
                 feedbackData.put("Topic Suggestion", suggestion);
                 feedbackData.put("Rating", rating);
-
 
                 db.collection("UserFeedback").add(feedbackData);
 
@@ -81,7 +77,6 @@ public class Feedback extends AppCompatActivity implements AdapterView.OnItemSel
 
             }
         });
-
 
     }
 

@@ -22,7 +22,6 @@ public class Settings extends AppCompatActivity {
     Button changePassword, feedbackForm, deleteAccount, logout;
     EditText getPassword;
     String password;
-
     ProgressBar progressBar;
 
 
@@ -77,7 +76,6 @@ public class Settings extends AppCompatActivity {
                     }
                 });
 
-
             }
         });
 
@@ -89,7 +87,6 @@ public class Settings extends AppCompatActivity {
                 Intent intent = new Intent(Settings.this, Login.class);
                 startActivity(intent);
                 finish();
-
 
             }
         });
@@ -118,8 +115,6 @@ public class Settings extends AppCompatActivity {
             }
         });
 
-
     }
-
 
 }

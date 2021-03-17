@@ -23,9 +23,7 @@ public class Login extends AppCompatActivity {
 
     EditText userEmail, userPassword;
     String email, password;
-
     private FirebaseAuth mAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +37,6 @@ public class Login extends AppCompatActivity {
         forgot_password = findViewById(R.id.button_forgotpassword);
         button_login = findViewById(R.id.button_login);
         button_registration = findViewById(R.id.button_registration);
-
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -108,7 +105,6 @@ public class Login extends AppCompatActivity {
                     });
                 }
 
-
             }
         });
 
@@ -131,7 +127,6 @@ public class Login extends AppCompatActivity {
         }
 
     }
-
 
     private boolean validatePassword() {
         password = userPassword.getText().toString();
