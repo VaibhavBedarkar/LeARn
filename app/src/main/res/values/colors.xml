@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lightgreen">#C8E1CC</color>
+    <color name="colorPrimary">#1A1818</color>
+    <color name="colorPrimaryDark">#1A1818</color>
+    <color name="colorAccent">@color/black</color>
+    <color name="textColorPrimary">@color/black</color>
+    <color name="textInputOutlineColor">@color/black</color>
+    <color name="black">#1A1818</color>
+
+    <color name="home_background">#F2F5F8</color>
+    <color name="banner_background">#F1E9CE</color>
+    <color name="banner_background_light">#56f1e9ce</color>
+
+
+</resources>

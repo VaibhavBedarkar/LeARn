@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">LeARn</string>
+    <string name="hint_username">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="student_name">First Name</string>
+    <string name="student_gender_male">Male</string>
+    <string name="student_gender_female">Female</string>
+    <string name="student_gender_other">Other</string>
+    <string name="student_class">Select Class</string>
+    <string name="student_email">Email</string>
+    <string name="student_mobile">Mobile</string>
+    <string name="student_password">Create Password</string>
+    <string name="grp">Select Group</string>
+    <string name="text_label_1">Feedback</string>
+    <string name="text_label_2">View in AR</string>
+    <string name="text_label_3">Manage account</string>
+    <string name="topic_name">Topic Name</string>
+    <string name="expected_name">Expected Name</string>
+    <string name="detail">Add Description</string>
+    <string name="rate_string">Rate your Experience</string>
+    <string name="feed_name">Feedback</string>
+    <string name="btn_submit">Submit</string>
+    <string name="select_sub">Select Subject:</string>
+    <string name="btn_forgotpass">Forgot Password?</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="made_by"> Made with ❤ by LeARn</string>
+    <string name="btn_registration">New User? Create an Account</string>
+    <string name="sugg_desc">Suggestion Description</string>
+    <string name="reg_user">Register User</string>
+    <string name="create_acc">Create An Account</string>
+    <string name="gender">"Gender: "</string>
+    <string name="group_join">Select Group to Join:</string>
+    <string name="sub_phy">Physics</string>
+    <string name="success_msg">Account Created Successfully !!</string>
+    <string name="setting">Settings</string>
+    <string name="pass_update">Update Password</string>
+    <string name="pass_change">Change Password</string>
+    <string name="feedback">Provide Feedback</string>
+    <string name="btn_feedback">Feedback</string>
+    <string name="btn_logout">Logout</string>
+    <string name="btn_deleteaccount">Danger Zone</string>
+    <string name="btn_accDelete">Delete Account</string>
+    <string name="loading">Loading...</string>
+    <string name="btn_download">Download Asset</string>
+    <string name="random_law">Generate Law</string>
+    <string name="heading">Law Trivia</string>
+    <string name="law_statement"></string>
+    <string name="law" />
+    <string name="Articles">Reference</string>
+
+    <string-array name="group">
+        <item> Foundation Stage (3 to 8 years)</item>
+        <item> Preparatory Stage (8 to 11 years) </item>
+        <item> Middle Stage (11 to 14 years)</item>
+        <item> Secondary Stage (14 to 18 years)</item>
+    </string-array>
+
+    <string-array name="subject">
+        <item>Physics</item>
+        <item>Chemistry </item>
+        <item>Biology</item>
+        <item>History</item>
+        <item>Geography</item>
+    </string-array>
+
+</resources>

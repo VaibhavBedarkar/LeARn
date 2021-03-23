@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "932828498817",
+    "project_id": "learn-9d34e",
+    "storage_bucket": "learn-9d34e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932828498817:android:26e164f7f9c083ef5b7680",
+        "android_client_info": {
+          "package_name": "com.vaibhavbedarkar.learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932828498817-1e7oap7krcrl1cnhe14kbjomi17qlr2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4Ym79GML2HNbFt_bz5zkA-oiWFNboiM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932828498817-1e7oap7krcrl1cnhe14kbjomi17qlr2m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
