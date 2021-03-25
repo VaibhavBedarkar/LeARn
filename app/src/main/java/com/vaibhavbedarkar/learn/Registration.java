@@ -56,7 +56,6 @@ public class Registration extends AppCompatActivity implements AdapterView.OnIte
         tl_mobile = findViewById(R.id.tl_mobile);
 
         progress_register = findViewById(R.id.progress_register);
-
         user_Group = findViewById(R.id.user_group);
 
         genderGroup = findViewById(R.id.genderGroup);
@@ -69,7 +68,6 @@ public class Registration extends AppCompatActivity implements AdapterView.OnIte
         user_Group.setOnItemSelectedListener(this);
 
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-
         FirebaseFirestore userDatabase = FirebaseFirestore.getInstance();
 
         registerUser.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +124,7 @@ public class Registration extends AppCompatActivity implements AdapterView.OnIte
         if (userMobile.isEmpty()) {
             user_mobile.setError("Field can't be empty");
             return false;
-        } else if (userMobile.length() < 10) {
+        } else if (userMobile.length() <= 10) {
             user_mobile.setError("Enter valid phone number");
             return false;
         } else {

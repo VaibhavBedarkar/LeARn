@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.ar.sceneform:rendering:1.15.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c3190b2b96b48e46fbbd0674ea3b5f82/jetified-rendering-1.15.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c3190b2b96b48e46fbbd0674ea3b5f82/jetified-rendering-1.15.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c3190b2b96b48e46fbbd0674ea3b5f82/jetified-rendering-1.15.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/adb1bba19edfd05ecaf9e7a790460663/jetified-rendering-1.15.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/adb1bba19edfd05ecaf9e7a790460663/jetified-rendering-1.15.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/adb1bba19edfd05ecaf9e7a790460663/jetified-rendering-1.15.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

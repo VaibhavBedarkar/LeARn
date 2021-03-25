@@ -82,6 +82,17 @@ public class ArActivity extends AppCompatActivity {
 
     }
 
+    public void loadDB(Session session, Config config) {
+        InputStream dbStream = getResources().openRawResource(R.raw.imglist);
+        try {
+            AugmentedImageDatabase aid = AugmentedImageDatabase.deserialize(session, dbStream);
+            config.setAugmentedImageDatabase(aid);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     private void onUpdate(FrameTime frameTime) {
         FirebaseApp.initializeApp(this);
         FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -105,15 +116,18 @@ public class ArActivity extends AppCompatActivity {
                     model = imageToModel.get(image.getName());
                     stringCharacterIterator.setText(model);
                     downloadbtn.setVisibility(View.VISIBLE);
+
                 }
 
                 StorageReference modelRef = storage.getReference().child(model);
                 downloadbtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Toast.makeText(ArActivity.this, "Downloading assets", Toast.LENGTH_SHORT).show();
                         downloadbtn.setVisibility(View.INVISIBLE);
                         try {
                             File file = File.createTempFile(model, ".glb");
+
                             modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
@@ -143,14 +157,5 @@ public class ArActivity extends AppCompatActivity {
 
     }
 
-    public void loadDB(Session session, Config config) {
-        InputStream dbStream = getResources().openRawResource(R.raw.imglist);
-        try {
-            AugmentedImageDatabase aid = AugmentedImageDatabase.deserialize(session, dbStream);
-            config.setAugmentedImageDatabase(aid);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-    }
 }

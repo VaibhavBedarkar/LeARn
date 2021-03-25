@@ -47,6 +47,8 @@
     <string name="law_statement"></string>
     <string name="law" />
     <string name="Articles">Reference</string>
+    <string name="welcome">Welcome</string>
+    <string name="sub_off">Subjects Offered</string>
 
     <string-array name="group">
         <item> Foundation Stage (3 to 8 years)</item>

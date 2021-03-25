@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF3E0"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:scrollbars="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -45,77 +46,70 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="14dp"
-        android:fontFamily="@font/raleway"
-        android:text="@string/heading"
-        android:textAppearance="?attr/textAppearanceHeadline6"
-        android:textSize="22sp" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
+        android:id="@+id/welcome_card"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10sp"
-        app:cardCornerRadius="4sp"
-        app:strokeColor="@color/black"
-        app:strokeWidth="2sp">
+        android:elevation="8dp"
+        app:cardCornerRadius="6dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="10dp">
 
-            <TextView
-                android:id="@+id/law"
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="22dp"
+                android:src="@drawable/ic_welcome_dashboard" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/oldenburg"
-                android:paddingTop="2sp"
-                android:text="@string/law"
-                android:textAlignment="viewStart"
-                android:textColor="@color/black"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/law_statement"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/pacifico"
-                android:text="@string/law_statement"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/welcome_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/oldenburg"
+                    android:paddingTop="2sp"
+                    android:text="@string/welcome"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/oldenburg"
+                    android:paddingTop="2sp"
+                    android:text="@string/welcome"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/generate_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="10sp"
-            android:text="@string/random_law"
-
-            app:elevation="4sp" />
     </com.google.android.material.card.MaterialCardView>
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="14dp"
+        android:layout_margin="8dp"
         android:fontFamily="@font/raleway"
-        android:text="@string/Articles"
+        android:text="@string/sub_off"
         android:textAppearance="?attr/textAppearanceHeadline6"
         android:textSize="22sp" />
 
@@ -267,12 +261,78 @@
         </LinearLayout>
     </HorizontalScrollView>
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/heading"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="22sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="10sp"
+        app:cardCornerRadius="4sp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2sp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/law"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/oldenburg"
+                android:paddingTop="2sp"
+                android:text="@string/law"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/law_statement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/pacifico"
+                android:text="@string/law_statement"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/generate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10sp"
+            android:text="@string/random_law"
+
+            app:elevation="4sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/extended_fab"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_margin="28dp"
+        android:layout_margin="10dp"
         android:backgroundTint="#FFAB91"
         android:shadowColor="#B71C1C"
         android:text="Scan for AR "
@@ -284,4 +344,3 @@
 
 
 </LinearLayout>
-

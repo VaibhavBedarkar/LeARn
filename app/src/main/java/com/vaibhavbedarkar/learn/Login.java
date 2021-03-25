@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
                                 finish();
                             } else {
 
-                                Toast.makeText(Login.this, "Auth Failed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Authentication Failed!!!", Toast.LENGTH_SHORT).show();
 
                             }
                         }
@@ -99,7 +99,7 @@ public class Login extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Toast.makeText(Login.this, "Password reset link sent to registered email", Toast.LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(Login.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Failed to send password reset email!", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

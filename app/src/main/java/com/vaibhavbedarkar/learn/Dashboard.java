@@ -38,6 +38,7 @@ public class Dashboard extends AppCompatActivity {
         alertDialogue.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
                 finish();
             }
 
