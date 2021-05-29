@@ -75,7 +75,7 @@ public class Registration extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View v) {
                 progress_register.setVisibility(View.VISIBLE);
 
-                if (nameValidation() && emailValidation() && passwordValidation() && genderValidation() && mobileValidation()) {
+                if (nameValidation() && emailValidation() && passwordValidation() && genderValidation()) {
                     userMobile = user_mobile.getText().toString();
                     userName = user_name.getText().toString().trim();
                     userPassword = user_password.getText().toString().trim();
@@ -118,20 +118,6 @@ public class Registration extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
-    public boolean mobileValidation() {
-        userMobile = user_mobile.getText().toString();
-
-        if (userMobile.isEmpty()) {
-            user_mobile.setError("Field can't be empty");
-            return false;
-        } else if (userMobile.length() <= 10) {
-            user_mobile.setError("Enter valid phone number");
-            return false;
-        } else {
-            user_mobile.setError(null);
-            return true;
-        }
-    }
 
     public boolean nameValidation() {
         userName = user_name.getText().toString().trim();

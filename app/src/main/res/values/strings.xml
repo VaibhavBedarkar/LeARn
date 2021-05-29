@@ -49,7 +49,8 @@
     <string name="Articles">Reference</string>
     <string name="welcome">Welcome</string>
     <string name="sub_off">Subjects Offered</string>
-    <string name="user_Name">Vaibhav Bedarkar</string>
+    <string name="user_Name">User Name</string>
+    <string name="user_Email">User Email</string>
 
     <string-array name="group">
         <item> Foundation Stage (3 to 8 years)</item>

@@ -98,6 +98,19 @@
                     android:textAlignment="viewStart"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/oldenburg"
+                    android:paddingTop="2sp"
+                    android:text="@string/user_Name"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
