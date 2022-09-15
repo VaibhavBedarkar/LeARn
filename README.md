@@ -18,7 +18,7 @@ Created an interactive learning application which enables students to Augment th
 
 ## Screenshot
 
-![App Screenshot](https://drive.google.com/file/d/1afVh2jVyeU0L_0HQLUflbUnPGjYhyDHU/view?usp=sharing)]
+![App Screenshot](https://github.com/VaibhavBedarkar/LeARn/blob/master/learn.jpg)]
 
 ## Development Team
 | Team Member | In-charge |
@@ -28,4 +28,3 @@ Created an interactive learning application which enables students to Augment th
 | Trunali Zalte | Documentation and resource planning |
 | Sakshi Patil | Documentation and Reporting |
 
-[![Download link](https://drive.google.com/file/d/17QSGS5OL0UOlkTLbh-jCuumV6ZEoxBDO/view?usp=sharing)
