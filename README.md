@@ -18,7 +18,7 @@ Created an interactive learning application which enables students to Augment th
 
 ## Screenshot
 
-![Alt text](Image URL)
+![App Screenshot](learn.jpg)
 
 ## Development Team
 | Team Member | In-charge |
