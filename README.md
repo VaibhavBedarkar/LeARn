@@ -27,3 +27,5 @@ Created an interactive learning application which enables students to Augment th
 | Vaibhav Bedarkar | Development and Planning|
 | Trunali Zalte | Documentation and resource planning |
 | Sakshi Patil | Documentation and Reporting |
+
+[![Download link](https://cdn-icons-png.flaticon.com/512/5969/5969010.png)](http://www.gnu.org/licenses/agpl-3.0)
