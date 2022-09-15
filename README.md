@@ -18,7 +18,7 @@ Created an interactive learning application which enables students to Augment th
 
 ## Screenshot
 
-![App Screenshot](https://github.com/VaibhavBedarkar/LeARn/blob/master/learn.jpg)
+![App Screenshot](https://drive.google.com/file/d/1afVh2jVyeU0L_0HQLUflbUnPGjYhyDHU/view?usp=sharing)]
 
 ## Development Team
 | Team Member | In-charge |
