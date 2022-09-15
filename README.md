@@ -28,4 +28,4 @@ Created an interactive learning application which enables students to Augment th
 | Trunali Zalte | Documentation and resource planning |
 | Sakshi Patil | Documentation and Reporting |
 
-[![Download link](https://cdn-icons-png.flaticon.com/512/5969/5969010.png)](http://www.gnu.org/licenses/agpl-3.0)
+[![Download link](https://drive.google.com/file/d/17QSGS5OL0UOlkTLbh-jCuumV6ZEoxBDO/view?usp=sharing)
