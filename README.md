@@ -17,8 +17,7 @@ Created an interactive learning application which enables students to Augment th
 - [Material design 2.0] -Designing of UI
 
 ## Screenshot
-<img src="https://github.com/VaibhavBedarkar/LeARn/blob/master/learn.jpg">
-![App Screenshot](https://github.com/VaibhavBedarkar/LeARn/blob/master/learn.jpg)]
+<img src="https://vaibhavbedarkar.github.io/screenshot/learn.jpg" width="600" height="400" />
 
 ## Development Team
 | Team Member | In-charge |
