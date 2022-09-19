@@ -1,5 +1,7 @@
 # LeARn 
-Created an interactive learning application which enables students to Augment the normal 2D textbook into an AR experience in a span of 50 days
+Created an interactive learning application which enables students to Augment the normal 2D textbook into an AR experience.
+
+Download: https://drive.google.com/file/d/17QSGS5OL0UOlkTLbh-jCuumV6ZEoxBDO/view
 
 ## Features
 
